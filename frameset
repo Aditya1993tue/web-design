@@ -1,0 +1,18 @@
+<html>     
+    <head> 
+        <title> aditya agarwal is a rockstar </title> 
+    </head> 
+          
+    <frameset cols = "30%, 40%, 30%"> 
+        <frame name = "top" src =  
+        "C:\Users\lab.AMITYKOL.007\Desktop\noida1.jpg" /> 
+        <frame name = "main" src =  
+        "C:\Users\lab.AMITYKOL.007\Desktop\amityjaipur.jpg" /> 
+        <frame name = "bottom" src =  
+        "C:\Users\lab.AMITYKOL.007\Desktop\amitymumbai.jpg" />         
+        <noframes> 
+            <body>The browser you are working does  
+                         not support frames.</body> 
+        </noframes> 
+    </frameset> 
+</html>              
