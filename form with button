@@ -1,0 +1,43 @@
+<html>
+<body bgcolor = "#ffcccc" >
+
+<h1> registration form </h1>
+
+
+<marquee width="60%" direction="right" height="100px"> amity university </marquee>
+
+<form action="/action_page.php" method="get">
+First name: <input type="text" name="fname"><br>
+
+<form action="">
+  <input type="radio" name="gender" value="male"> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="transgender"> transgender <br>
+
+<form action="">
+  <input type="checkbox" name="grad" value="gr"> graduation<br>
+  <input type="checkbox" name="postgrd" value="p.g"> post graduation<br>
+  
+<input type="checkbox" name="diploma" value="dimp" checked> diploma<br><br>
+
+
+<form action="">
+  <select name="cars">
+    <option value="kolkata">kolkata</option>
+    <option value="mumbai">mumbai</option>
+    <option value="jaipur" selected>jaipur</option>
+    <option value="noida">noida</option>
+  </select>
+  <br><br>
+  
+
+
+
+
+
+
+<textarea rows="9" cols="50"> </textarea>
+<button type="submit" form="nameform" value="Submit">Submit</button>
+ <input type="reset" value="Reset">
+</body>
+</html>
