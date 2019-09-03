@@ -1,0 +1,45 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>External style sheet</title>
+ <link rel="stylesheet" type="text/css" href="stylesheet.css">
+ </head>
+ <body>
+
+ <div>
+ <h1>roll number distribution </h1>
+ <table>
+   <tr id="trHeader">
+     <th>student</th>
+     <th>roll_number</th>
+     <th>seat</th>
+   </tr>
+   <tr>
+     <td>aditya agarwal</td>
+     <td class="centerCell">A91400717002</td>
+     <td>front_row_second_left</td>
+   </tr>
+   <tr>
+     <td>ayush ghosh</td>
+     <td class="centerCell">A91400717012</td>
+     <td>second_row_to_the_right</td>
+   </tr>
+   <tr>
+     <td>sangeeta_shit</td>
+     <td class="centerCell">A91400717003</td>
+     <td>second_row_next_to_ayush</td>
+   </tr>
+<tr>
+     <td>prince_kumar manish</td>
+     <td class="centerCell">A91400717004</td>
+     <td>third_row_first_seat</td>
+   </tr>
+ <tr>
+     <td>madhur_chotia</td>
+     <td class="centerCell">A91400717012</td>
+     <td>third_row_next_to_manish</td>
+   </tr>
+ </table>
+ </div>
+ </body>
+ </html>
