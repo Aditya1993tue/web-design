@@ -1,0 +1,23 @@
+<html>
+<head>
+<h1>first progrm</h1>
+</head>
+<body>
+<form action="aditya2.php" method="get" name="form1">
+  First name: <input type="text" name="txt1"><br>
+  
+  <input type="submit" name="btn1">
+</form>
+</body>
+</html>
+
+
+
+<html>
+<body>
+<?php 
+$n = $_GET["txt1"];
+echo "welcome ".$n;
+?>
+</body>
+</html>
