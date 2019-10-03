@@ -1,0 +1,10 @@
+<?php
+$x = 20;
+$y =25;
+function f()
+{
+$GLOBALS['K'] =$GLOBALS['x']+$GLOBALS['y'];
+}
+f();
+echo $K;
+?>
