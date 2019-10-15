@@ -1,0 +1,49 @@
+#html code  for form creation#
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Add Record Form</title>
+</head>
+<body>
+<form action="insert.php" method="post">
+    <p>
+        <label for="emloyee_id">emloyee_id:</label>
+        <input type="text" name="emloyee_id" id="emloyee_id">
+    </p>
+    <p>
+        <label for="employee_name">employee_name:</label>
+        <input type="text" name="employee_name" id="employee_name">
+    </p>
+    
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
+
+# php code for connecting database using php#
+
+
+<?php
+$servername = "localhost";
+$username = "username";
+$password = "password";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Create database
+$sql = "CREATE DATABASE myDB";
+if ($conn->query($sql) === TRUE) {
+    echo "Database created successfully";
+} else {
+    echo "Error creating database: " . $conn->error;
+}
+
+$conn->close();
+?>
