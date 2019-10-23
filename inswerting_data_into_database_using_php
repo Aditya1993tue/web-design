@@ -5,10 +5,10 @@
 <title>Add Record Form</title>
 </head>
 <body>
-<form action="addrec.php" method="post">
+<form action="adityaform34.php" method="post">
     <p>
-        <label for="emloyee_id">emloyee_id:</label>
-        <input type="text" name="txt1" id="emloyee_id">
+        <label for="employee_id">employee_id:</label>
+        <input type="text" name="txt1" id="employee_id">
     </p>
     <p>
         <label for="employee_name">employee_name:</label>
@@ -19,8 +19,6 @@
 </form>
 </body>
 </html>
-
-# php code for connecting database#
 
 <html>
 	<body>
@@ -51,9 +49,7 @@
 </html>
 
 
-#for fetching data from table #
-
-<html>
+html>
 
 	<body>
 		<?php
@@ -67,13 +63,13 @@
 				die("Connection Failed".mysqli_connect_error());
 			}
 		
-			$sql="SELECT * FROM employee";
+			$sql="SELECT * FROM aditya_table1";
 			$result=mysqli_query($conn,$sql);
 			if(mysqli_num_rows($result)>0)
 			{    echo "<table border='2'><tr><th>Code</th><th>Name</th></tr>";
 				while($row=mysqli_fetch_assoc($result))
 			{
-				echo "<tr><td>".$row["emp_code"]."</td><td> ".$row["emp_name"]."</td></tr>";
+				echo "<tr><td>".$row["employee_id"]."</td><td> ".$row["employee_name"]."</td></tr>";
 			}
 			echo "</table>";
 			}
