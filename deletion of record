@@ -1,0 +1,89 @@
+
+form{
+	position: absolute;
+    left : 398px;
+    top  : 235px;
+	text-align: center;
+	padding: 18px 6% 60px 6%;
+	margin: 0 0 35px 0;
+	background: rgb(247, 247, 247);
+	border: 1px solid rgba(147, 184, 189,0.8);
+	box-shadow:	
+		0pt 2px 5px rgba(105, 108, 109,  0.7),	
+		0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+	border-radius: 5px;
+}
+input {
+        width:100%; 
+        margin: 8px; 
+        border: 1px solid blue; 
+        border-radius: 4px; 
+}
+
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="empDesign.css">
+</head>
+<form name="Employee" method="post" action="empScript.php">
+
+ Enter Code:<input type="text" name="code_txt"><br>
+ Enter Name:<input type="text" name="name_txt"><br>
+ Enter Department:<input type="text" name="dept_txt"><br>
+ Enter Design:<input type="text" name="des_txt"><br>
+
+ <input type="submit" value="Add">
+</form>
+</html>
+
+
+
+<?php
+	$server="localhost";
+	$user="root";
+	$pass='';
+	$db="s1";
+	$conn=mysqli_connect($server,$user,$pass,$db);
+	if(!$conn)
+	{
+		die("Connection Failed".mysqli_connect_error());
+	}
+	$ecode=$_POST['code_txt'];
+	$ename=$_POST['name_txt'];
+	$edept=$_POST['dept_txt'];
+	$edes =$_POST['des_txt'];
+	$sql="Insert into Employee(Empcode,Empname,Empdept,Empdes) values('$ecode','$ename','$edept','$edes')";
+	if(mysqli_query($conn,$sql))
+	{
+		echo "Record Added Successfully....!";
+	}
+	else
+	{
+		echo "error";
+	}
+		mysqli_close($conn);
+?>
+
+
+
+
+form{
+	position: absolute;
+    left : 398px;
+    top  : 235px;
+	text-align: center;
+	padding: 18px 6% 60px 6%;
+	margin: 0 0 35px 0;
+	background: rgb(247, 247, 247);
+	border: 1px solid rgba(147, 184, 189,0.8);
+	box-shadow:	
+		0pt 2px 5px rgba(105, 108, 109,  0.7),	
+		0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+	border-radius: 5px;
+}
+input {
+        width:100%; 
+        margin: 8px; 
+        border: 1px solid blue; 
+        border-radius: 4px; 
+}
