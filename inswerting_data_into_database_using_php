@@ -81,3 +81,89 @@ html>
 		?>
 	</body>
 </html>
+
+
+<?php
+$server="localhost";
+$user="root";
+$pass='';
+$db="aditya_table";
+$conn=mysqli_connect($server,$user,$pass,$db);
+if(!$conn)
+{
+die("Connection Failed".mysqli_connect_error());
+}
+
+$sql =  "select * from aditya_table1 employee_id where employee_id='$_GET[id]'";
+$result = mysqli_query($conn, $sql);
+if (mysqli_num_rows($result)>0)
+{
+	echo"<form action='clickUpdate.php' method='get'>";
+	$row = mysqli_fetch_assoc($result);
+	echo "Update details for: <input type='text' name='code_txt' value='".$row['employee_id']."'><br>";
+	echo "Employee Name: <input type='text' name='name_txt' value='".$row['employee_name']."'><br>";
+	echo "Employee Department: <input type='text' name='dept_txt' value='".$row['emp_dept']."'><br>";
+	echo "Employee Designation: <input type='text' name='des_txt' value='".$row['emp_desg']."'><br>";
+	echo  "<button type='submit'>Update</button><br>";
+	echo "<button type='submit' formaction='empDisplay.php'>Cancel</button>";
+	   
+}
+else
+{
+   echo "No record found";
+}
+mysqli_free_result($result);
+mysqli_close($conn);
+?>
+
+
+<?php
+$server="localhost";
+$user="root";
+$pass='';
+$db="aditya_table";
+$conn=mysqli_connect($server,$user,$pass,$db);
+if(!$conn)
+{
+				die("Connection Failed".mysqli_connect_error());
+}
+
+$sql =  "delete from aditya_table1 where employee_id='$_GET[id]'";
+$result = mysqli_query($conn, $sql);
+if ($result)
+	header("refresh:1; url=empDisplay.php");
+else
+	echo "Not deleted";
+?>
+
+
+<html>
+	<body>
+		<?php
+			$server="localhost";
+			$user="root";
+			$pass="";
+			$db="aditya_table";
+			$conn=mysqli_connect($server,$user,$pass,$db);
+			if(!$conn)
+			{
+				die("Connection Failed".mysqli_connect_error());
+			}
+			$employee_id=$_POST['txt1'];
+			$employee_name=$_POST['txt2'];
+			$emp_dept=$_POST['txt3'];
+			$emp_desg=$_POST['txt4'];
+			
+			$sql="Insert into aditya_table1(employee_id,employee_name,emp_dept,emp_desg) values('$employee_id','$employee_name','$emp_dept','$emp_desg')";
+			if(mysqli_query($conn,$sql))
+			{
+				echo "Record Added Successfully....!";
+			}
+			else
+			{
+				echo "error";
+			}
+				mysqli_close($conn);
+		?>
+	</body>
+</html>
