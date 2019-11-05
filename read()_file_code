@@ -1,0 +1,21 @@
+<?php
+echo readfile("emp.txt");
+?>
+
+#with fclose and fread 
+<?php
+$file = fopen("emp.txt","r") or die("unable to open!");
+echo fread($file,filesize("emp.txt"));
+fclose($file);
+?>
+
+#data within the file
+aditya 
+anirban
+abhishek
+ayush
+sangita
+#now this data will be printed for second one will be
+aditya anirban abhishek ayush sangita
+#now for the first one will be
+aditya anirban abhishek ayush sangita42
