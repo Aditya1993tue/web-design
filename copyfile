@@ -1,0 +1,21 @@
+<?php  
+// Store the path of source file 
+$source = 'C:\Users\lab.AMITYKOL.003\Desktop';  
+  
+// Store the path of destination file 
+$destination = 'C:\Users\lab.AMITYKOL.003\Documents';  
+ 
+if( !copy($source, $destination) ) {  
+    echo "File can't be copied! \n";  
+}  
+else {  
+    echo "File has been copied! \n";  
+}  
+  
+?>  
+#data within the file
+aditya 
+anirban
+abhishek
+ayush
+sangita
