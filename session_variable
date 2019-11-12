@@ -1,0 +1,25 @@
+<?php
+session_start();
+?>
+<html>
+<body>
+<?php
+$_SESSION["COLOR"] = "RED";
+echo "session variable are set";
+?>
+<br>
+<a herf="session2.php">click for next page </a>
+</body>
+</html>
+
+################################################
+<?php
+session_start();
+?>
+<html>
+<body>
+<?php
+echo "your color = ".$_SESSION["color"]="red";
+?>
+</body>
+</html>
